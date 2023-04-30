@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Application">
+		<Name>Masterclass</Name>
+		<Assembly>Masterclass\Masterclass.Revit.2021.dll</Assembly>
+		<AddInId>
+			EEE02802-BDD9-4AE0-88A6-357B2BB5A3DF
+		</AddInId>
+		<FullClassName>MasterclassRevit.AppCommand</FullClassName>
+		<VendorId>ValorVDC</VendorId>
+		<VendorDescription>Building Better Families</VendorDescription>
+	</AddIn>
+</RevitAddIns>
