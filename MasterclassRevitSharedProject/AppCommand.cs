@@ -3,6 +3,7 @@ using MasterclassRevit.FirstButton;
 using MasterclassRevit.SecondButton;
 using System;
 using System.Linq;
+using MasterclassRevit.FourthButton;
 
 namespace MasterclassRevit
 {
@@ -24,7 +25,12 @@ namespace MasterclassRevit
 
             //create buttons
             FirstButtonCommand.CreateButton(ribbonPanel);
+            ribbonPanel.AddSeparator();
             SecondButtonCommand.CreateButton(ribbonPanel);
+            ribbonPanel.AddSeparator();
+            FourthButtonCommand.CreateButton((ribbonPanel));
+
+            DockablePanelUtils.RegisterDockablePanel(app);
 
             return Result.Succeeded;
         }

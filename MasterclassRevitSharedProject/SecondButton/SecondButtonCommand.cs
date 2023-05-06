@@ -21,37 +21,45 @@ namespace MasterclassRevit.SecondButton
             try
             {
                 var uiApp = commandData.Application;
-                var model = new SecondButtonModel(uiApp);
-                var viewmodel = new SecondButtonViewModel(model);
-                var view = new SecondButtonView();
-                view.DataContext = viewmodel;
-                
-                //To keep the Revit windows from orphan or left behind when Revit is shutdown
-                var unused = new WindowInteropHelper(view) 
-                    { Owner = Process.GetCurrentProcess().MainWindowHandle };
-                //you could do it like on Line 27
-                // unused.Owner = Process.GetCurrentProcess().MainWindowHandle;
-                
-                view.ShowDialog();
+
+                var m = new SecondButtonModel(uiApp);
+                var vm = new SecondButtonViewModel(m);
+                var v = new SecondButtonView
+                {
+                    DataContext = vm
+                };
+
+                var unused = new WindowInteropHelper(v)
+                {
+                    //To keep the Revit windows from orphan or left behind when Revit is shutdown
+                    Owner = Process.GetCurrentProcess().MainWindowHandle
+                    //you could do it like on Line 27
+                    // unused.Owner = Process.GetCurrentProcess().MainWindowHandle;
+                };
+
+                v.ShowDialog();
+
                 return Result.Succeeded;
             }
-            catch (System.Exception)
+            catch
             {
-
                 return Result.Failed;
             }
         }
         public static void CreateButton(RibbonPanel panel)
         {
             var assembly = Assembly.GetExecutingAssembly();
-            panel.AddItem(new PushButtonData(
-                MethodBase.GetCurrentMethod().DeclaringType?.Name,
-                "Second " + Environment.NewLine + "Button", assembly.Location,
-                MethodBase.GetCurrentMethod().DeclaringType?.FullName)
-            {
-                ToolTip = "Second Button Command!",
-                LargeImage = ImageUtils.LoadImage(assembly, "_32x32.stormTrooper-32.png")
-            });
+            panel.AddItem(
+                new PushButtonData(
+                    MethodBase.GetCurrentMethod().DeclaringType?.Name,
+                    "Second" + Environment.NewLine + "Button",
+                    assembly.Location,
+                    MethodBase.GetCurrentMethod().DeclaringType?.FullName)
+                {
+                    ToolTip = "Second button tooltip.",
+                    LargeImage = ImageUtils.LoadImage(assembly, "_32x32.vader-32.png")
+                });
         }
     }
 }
+

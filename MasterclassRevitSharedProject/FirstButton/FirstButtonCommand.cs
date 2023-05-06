@@ -30,14 +30,16 @@ namespace MasterclassRevit.FirstButton
         public static void CreateButton(RibbonPanel panel)
         {
             var assembly = Assembly.GetExecutingAssembly();
-            panel.AddItem(new PushButtonData(
-                MethodBase.GetCurrentMethod().DeclaringType?.Name,
-                "First " + Environment.NewLine + "Button", assembly.Location,
-                MethodBase.GetCurrentMethod().DeclaringType?.FullName)
-            {
-                ToolTip = "First Button Command!",
-                LargeImage = ImageUtils.LoadImage(assembly, "_32x32.stormTrooper-32.png")
-            });
+            panel.AddItem(
+                new PushButtonData(
+                    MethodBase.GetCurrentMethod().DeclaringType?.Name,
+                    "First" + Environment.NewLine + "Button",
+                    assembly.Location,
+                    MethodBase.GetCurrentMethod().DeclaringType?.FullName)
+                {
+                    ToolTip = "First button tooltip.",
+                    LargeImage = ImageUtils.LoadImage(assembly, "_32x32.stormTrooper-32.png")
+                });
         }
     }
 }

@@ -11,6 +11,9 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AppCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FirstButton\FirstButtonCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FourthButton\DockablePanelPage.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FourthButton\DockablePanelUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FourthButton\FourthButtonCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SecondButton\SecondButtonCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SecondButton\SecondButtonModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SecondButton\SecondButtonView.xaml.cs">
@@ -30,13 +33,27 @@
     <Content Include="$(MSBuildThisFileDirectory)..\..\..\OneDrive - valorvdc.com\Desktop\junk\Star Wars Images\mando-32.png">
       <Link>Resources\32x32\mando-32.png</Link>
     </Content>
+    <EmbeddedResource Include="\\Mac\Home\Desktop\Junk\Star Wars Images\vader-32.png">
+      <Link>Resources\32x32\vader-32.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\32x32\firstButton.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\32x32\fourthButton.png" />
     <Content Include="$(MSBuildThisFileDirectory)Resources\32x32\mando-32.png" />
-    <Content Include="$(MSBuildThisFileDirectory)Resources\32x32\vader-32.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\32x32\secondButton.png" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Resources\32x32\thirdButton.png" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)FourthButton\DockablePanelPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)SecondButton\SecondButtonView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)ThirdButton\" />
   </ItemGroup>
 </Project>

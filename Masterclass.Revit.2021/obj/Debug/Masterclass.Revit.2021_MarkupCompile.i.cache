@@ -4,17 +4,17 @@
 library
 C#
 .cs
-C:\Users\cbowk\source\repos\Masterclass\Masterclass.Revit.2021\obj\Debug\
+C:\Users\christopherbowker\RiderProjects\MasterClass\Masterclass.Revit.2021\obj\Debug\
 Masterclass.Revit
 none
 false
-DEBUG;TRACE
+TRACE;DEBUG;Revit2021
 
-1-770868691
-2-222133973
-91536619572
-17-1367907042
-C:\Users\cbowk\source\repos\Masterclass\MasterclassRevitSharedProject\SecondButton\SecondButtonView.xaml;
+2-2108567269
+3417543579
+12-544513108
+126-2062623001
+C:\Users\christopherbowker\RiderProjects\MasterClass\MasterclassRevitSharedProject\FourthButton\DockablePanelPage.xaml;C:\Users\christopherbowker\RiderProjects\MasterClass\MasterclassRevitSharedProject\SecondButton\SecondButtonView.xaml;
 
 False
 
