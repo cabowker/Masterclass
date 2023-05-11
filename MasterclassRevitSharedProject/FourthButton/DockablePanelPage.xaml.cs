@@ -17,6 +17,7 @@ namespace MasterclassRevit.FourthButton
                 DockPosition = DockPosition.Tabbed,
                 TabBehind = DockablePanes.BuiltInDockablePanes.ProjectBrowser
             };
+            data.VisibleByDefault = true;
         }
     }
 }

@@ -13,6 +13,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)FirstButton\FirstButtonCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FourthButton\DockablePanelPage.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FourthButton\DockablePanelUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FourthButton\DockablePanelViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)FourthButton\FourthButtonCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SecondButton\SecondButtonCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SecondButton\SecondButtonModel.cs" />
@@ -21,6 +22,9 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)SecondButton\SecondButtonViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SecondButton\SpatialElementWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ThirdButton\testwindow.xaml.cs">
+      <DependentUpon>testwindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\ImageUtils.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -33,6 +37,7 @@
     <Content Include="$(MSBuildThisFileDirectory)..\..\..\OneDrive - valorvdc.com\Desktop\junk\Star Wars Images\mando-32.png">
       <Link>Resources\32x32\mando-32.png</Link>
     </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Resources\32x32\RiderSharedProject.mp4" />
     <EmbeddedResource Include="\\Mac\Home\Desktop\Junk\Star Wars Images\vader-32.png">
       <Link>Resources\32x32\vader-32.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -52,8 +57,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)ThirdButton\" />
+    <Page Include="$(MSBuildThisFileDirectory)ThirdButton\testwindow.xaml" />
   </ItemGroup>
 </Project>
